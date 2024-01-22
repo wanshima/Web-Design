@@ -6,8 +6,8 @@ body {
 
 #homepage {
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 20% 80%;
     grid-template-areas:
         "header header"
         "menu main"
