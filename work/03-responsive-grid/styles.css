@@ -14,34 +14,35 @@ html, body {
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     padding: 20px;
 
-    background-color: burlywood;;
+    background-color: burlywood;
 }
 
 .header__logo {
-    max-width: 50px;
-    height: auto;
-    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .header__title {
-    margin-left: 16px;
+    flex-grow: 1;
 }
 
 .menu__list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
 
     padding: 0;
-    width: 100%;
     list-style: none;
 }
 
-.menu__list li {
-    margin: 8px 0;
+.menu__list li { 
+    text-align: center; 
+    margin: 8px 0; 
+    width: 100%;
 }
 
 .main {
@@ -98,13 +99,13 @@ html, body {
 
 .footer__grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); 
+    grid-template-columns: 1fr; 
     justify-content: center; 
     gap: 10px;
 }
 
 .footer__link {
-    grid-column: span 4; 
+    grid-column: span 1; 
     text-align: center; 
 
     color: black; 
@@ -114,6 +115,30 @@ html, body {
 }
 
 @media (min-width: 50rem) {
+    .header {
+        justify-content: space-between; 
+    }
+
+    .menu {
+        width: 50%; 
+    }
+
+    .menu__list {
+        flex-direction: row; 
+        justify-content: flex-start;
+        width: 100%; 
+    }
+
+    .menu__list li {
+        margin: 0 10px; 
+    }
+
+    .header__title {
+        text-align: center; 
+        flex-grow: 0; 
+        width: auto; 
+    }
+
     .cards {
         grid-template-columns: repeat(12, 1fr);
     }
@@ -122,13 +147,12 @@ html, body {
         grid-column: span 4;
     }
 
-    .menu__list {
-        flex-direction: row;
-        justify-content: space-around;
+    .footer__grid {
+        grid-template-columns: repeat(12, 1fr); 
     }
 
-    .menu__list li {
-        margin-top: 20px;
+    .footer__link {
+        grid-column: span 4; 
+        text-align: center; 
     }
-
 }
