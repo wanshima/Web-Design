@@ -49,6 +49,10 @@ html, body {
     padding: 16px;
 }
 
+.page__heading {
+    width: 100%;
+}
+
 .cards {
     display: grid;
     grid-template-columns: 1fr;
