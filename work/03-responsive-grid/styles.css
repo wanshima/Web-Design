@@ -47,6 +47,7 @@ html, body {
 
 .main {
     padding: 16px;
+    width: 100%;
 }
 
 .page__heading {
