@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Create Account</h1>
+    </header>
+    <main>
+        <form class="register" action="/submit" method="POST">
+            <p class="required">* Indicates required question</p>
+
+            <label for="name" class="register__label">Your Name <span class="required">*</span></label>
+            <input class="register__input" name="name" id="name" required pattern="\w{3,6}" title="Between 3-6 characters"/>
+
+            <label for="email" class="register__label">Email <span class="required">*</span></label>
+            <input class="register__input" name="email" id="email" type="email" required/>
+
+            <div class="register__checkbox-container">
+                <input type="checkbox" class="register__input register__input--checkbox" name="annoy-me" id="annoy-me" checked/>
+                <label for="annoy-me" class="register__label">Do you want us to send you annoying emails?</label>
+            </div>
+
+            <div class="register__row">
+                <label for="tier">Your Subscription Tier<span class="required">*</span></label>
+                <select name="tier" id="tier" class="register__input" required>
+                    <option value="" disabled selected>Please select</option>
+                    <option value="1">Silver Tier</option>
+                    <option value="2">Gold Tier</option>
+                    <option value="3">Platinum Tier</option>
+                </select>
+            </div>
+
+            <button type="submit" class="register__submit">Register</button>
+        </form>
+    </main>
+    <footer>
+        <a href="#" class="privacy-policy">Privacy Policy</a>
+    </footer>
+</body>
+</html>
