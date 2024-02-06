@@ -13,7 +13,7 @@
         <form class="register" action="/submit" method="POST">
             <p class="required">* Indicates required question</p>
 
-            <label for="name" class="register__label">Your Name <span class="required">*</span></label>
+            <label for="name" class="register__label">Name <span class="required">*</span></label>
             <input class="register__input" name="name" id="name" required pattern="\w{3,6}" title="Between 3-6 characters"/>
 
             <label for="email" class="register__label">Email <span class="required">*</span></label>
@@ -24,15 +24,13 @@
                 <label for="annoy-me" class="register__label register__label--checkbox">Do you want us to send you annoying emails?</label>
             </div>
 
-            <div class="register__row">
-                <label for="tier">Your Subscription Tier<span class="required">*</span></label>
-                <select name="tier" id="tier" class="register__input" required>
-                    <option value="" disabled selected>Please select</option>
-                    <option value="1">Silver Tier</option>
-                    <option value="2">Gold Tier</option>
-                    <option value="3">Platinum Tier</option>
-                </select>
-            </div>
+            <label for="tier" class="register__label">Subscription Tier<span class="required">*</span></label>
+            <select name="tier" id="tier" class="register__input" required>
+                <option value="" disabled selected>Please select</option>
+                <option value="1">Silver Tier</option>
+                <option value="2">Gold Tier</option>
+                <option value="3">Platinum Tier</option>
+            </select>
 
             <button type="submit" class="register__submit">Register</button>
         </form>
