@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register for an Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name=""viewport" content="width=device-width"/>
+</head>
+<body>
+    <header class="header">
+        <a href="/index.html">
+            <img src="images/logo.jpg" class = "header__logo" alt="seal looks up"/>
+        </a>
+        <h1 class="header__title">Life and Facts of Seals</h1>
+        <nav class="header__nav">
+            <ul class="menu">
+                <li class="menu__item">
+                    <button class="menu__toggle" type="button">Menu</button>
+                    <ul class="menu__submenu submenu">
+                        <li class="submenu__item"><a class="submenu__link" href="/index.html">Home</a></li>
+                        <li class="submenu__item"><a class="submenu__link" href="/about.html">About</a></li>
+                        <li class="submenu__item"><a class="submenu__link" href="/register.html">Register</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__toggle" type="button">External Links</button>
+                    <ul class="menu__submenu submenu">
+                        <li class="submenu__item"><a class="submenu__link" href="https://en.wikipedia.org/wiki/Pinniped">Seal Description</a></li>
+                        <li class="submenu__item"><a class="submenu__link" href="https://www.nationalgeographic.com/animals/mammals/facts/seals-pinnipeds-walruses-sea-lions">Seal Photo</a></li>
+                        <li class="submenu__item"><a class="submenu__link" href="https://www.ifaw.org/animals/seals">Seal Conservation</a></li>
+                    </ul>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="content__container">
+            <h2 class="page__title">Register for an Account</h2>
+        </div>
+        <form class="register" action="/register" method="POST">
+
+            <label for="name" class="register__label">Name <span class="required">*</span></label>
+            <input class="register__input" name="name" id="name" required pattern="\w{3,6}" title="Between 3-6 characters"/>
+
+            <label for="email" class="register__label">Email <span class="required">*</span></label>
+            <input class="register__input" name="email" id="email" type="email" required/>
+
+            <div class="register__checkbox-container">
+                <input type="checkbox" class="register__input register__input--checkbox" name="annoy-me" id="annoy-me" checked/>
+                <label for="annoy-me" class="register__label register__label--checkbox">Would you like to receive newsletter?</label>
+            </div>
+
+            <label for="region" class="register__label">Select Your Region:</label>
+            <select name="region" id="region" class="register__input">
+                <option value="" disabled selected>Please select</option>
+                <option value="1">North America</option>
+                <option value="2">South America</option>
+                <option value="3">Europe</option>
+                <option value="4">Asia</option>
+                <option value="5">Africa</option>
+                <option value="6">Australia</option>
+                <option value="7">Antarctica</option>
+            </select>
+            <p class="required">* Indicates required question</p>
+
+            <button type="submit" class="register__submit">Register</button>
+        </form>
+    </main>
+    <footer>
+        <a href="privacy.html" class="privacy-policy">Privacy Policy</a>
+    </footer>
+</body>
+</html>

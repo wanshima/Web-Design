@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    background-color: #fefae0;
+    color: #283618;
+
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 10px; 
+    align-items: center; 
+
+    padding: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+
+    background-color: #e9edc9;
+}
+
+.header__logo {
+    grid-column: 1 / span 2; 
+    grid-row: 1;
+
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 1rem;
+}
+
+.header__title {
+    grid-column: 4 / span 6; 
+    grid-row: 1;
+
+    text-align: center;
+}
+
+.header__nav {
+    grid-column: 1 / -1; 
+    grid-row: 3;
+
+    width: 100%; 
+    padding: 20px 0; 
+
+    background-color: #ccd5ae; 
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding: 0;
+    
+    list-style-type: none;
+}
+
+.menu__item:hover .submenu,
+.menu__item:focus-within .submenu {
+    rotate: x 0deg;
+}
+
+.menu__toggle {
+    border: none;
+    padding: 0px 8px;
+
+    background-color: inherit;
+    color: inherit;
+    color: -webkit-link;
+
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.submenu {
+    position: absolute;
+
+    padding: 0 8px;
+    overflow: hidden;
+
+    background-color: #faedcd;
+
+    list-style-type: none;
+
+    rotate: x 90deg;
+
+    transform-origin: top;
+}
+
+@media(prefers-reduced-motion: no-preference) {
+    .submenu {
+        transition: 0.2s;
+        transition-property: rotate;
+    }
+}
+
+.submenu__link {
+    display: inline-block;
+
+    width: 100%;
+    padding: 4px;
+    margin: 4px;
+}
+
+.submenu__link:hover,
+.submenu__link:focus {
+    background-color: #e9edc9;
+}
+
+.content__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    place-items: center;
+}
+
+.page__title {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+
+    margin-top: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 4;
+
+    border: 2px solid #ccd5ae;
+    border-radius: 16px;
+    padding: 8px;
+    margin-bottom: 20px;
+
+    background-color: #faedcd;
+}
+
+.card__title {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.card__image {
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    width: 100%;
+}
+
+.card__description {
+    padding: 8px;
+    margin-top: 1rem;
+}
+
+.card__link {
+    display: inline-block;
+
+    padding: 8px;
+    margin-top: auto;
+    border: 2px solid #ccd5ae;
+    border-radius: 8px;
+
+    background-color: #d4a373;
+    color: #283618;
+
+    text-decoration: none;
+}
+
+.about__main {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr); 
+}
+
+.about__description {
+    grid-column: 3 / span 8; 
+    padding: 1rem;
+    margin: 1rem auto; 
+
+    background-color: #faedcd;
+}
+
+.register {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 1rem;
+
+    max-width: 30rem; 
+    margin: auto;
+}
+
+.register__label, .register__input {
+    grid-column: span 12;
+}
+
+.register__checkbox-container {
+    display: flex;
+    grid-column: span 12; 
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.register__submit {
+    grid-column: span 12;
+    
+    margin: 16px 0;
+    border: none;
+    padding: 10px;
+
+    background-color: #d4a373;
+    color: white;
+
+    cursor: pointer;
+}
+
+.register__input:invalid {
+    border: 1px solid red; 
+}
+
+.required {
+    color: red;
+    grid-column: span 12;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    padding: 1rem;
+    
+    background-color: #e9edc9;
+
+    text-align: center;
+}
+
+footer a {
+    grid-column: span 12;
+
+    color: #283618; 
+
+    text-decoration: none; 
+}
+
+@media (max-width: 50rem) {
+    .card {
+        grid-column: span 12;
+    }
+
+    .register {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .register__label, .register__input, .register__checkbox-container, .register__submit {
+        grid-column: span 6; 
+    }
+
+    .required {
+        grid-column: span 6;
+    }
+}
