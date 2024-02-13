@@ -116,13 +116,13 @@ html, body {
     background-color: #e9edc9;
 }
 
-.content__container {
+.main__content-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     place-items: center;
 }
 
-.page__title {
+.main__page-title {
     grid-column: 1 / -1;
     text-align: center;
 }
@@ -180,13 +180,12 @@ html, body {
     text-decoration: none;
 }
 
-.about__main {
+.about-seals {
     display: grid;
-
     grid-template-columns: repeat(12, 1fr); 
 }
 
-.about__description {
+.about-seals__description {
     grid-column: 3 / span 8; 
     padding: 1rem;
     margin: 1rem auto; 
@@ -264,6 +263,7 @@ footer a {
     .register {
         grid-template-columns: repeat(6, 1fr);
     }
+    
     .register__label, .register__input, .register__checkbox-container, .register__submit {
         grid-column: span 6; 
     }

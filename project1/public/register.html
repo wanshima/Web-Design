@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Register for an Account</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name=""viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header class="header">
         <a href="/index.html">
-            <img src="images/logo.jpg" class = "header__logo" alt="seal looks up"/>
+            <img src="images/logo.jpg" class="header__logo" alt="seal looks up"/>
         </a>
         <h1 class="header__title">Life and Facts of Seals</h1>
         <nav class="header__nav">
@@ -28,12 +29,13 @@
                         <li class="submenu__item"><a class="submenu__link" href="https://www.nationalgeographic.com/animals/mammals/facts/seals-pinnipeds-walruses-sea-lions">Seal Photo</a></li>
                         <li class="submenu__item"><a class="submenu__link" href="https://www.ifaw.org/animals/seals">Seal Conservation</a></li>
                     </ul>
+                </li>
             </ul>
         </nav>
     </header>
     <main class="main">
-        <div class="content__container">
-            <h2 class="page__title">Register for an Account</h2>
+        <div class="main__content-container">
+            <h2 class="main__page-title">Register for an Account</h2>
         </div>
         <form class="register" action="/register" method="POST">
 
@@ -44,8 +46,8 @@
             <input class="register__input" name="email" id="email" type="email" required/>
 
             <div class="register__checkbox-container">
-                <input type="checkbox" class="register__input register__input--checkbox" name="annoy-me" id="annoy-me" checked/>
-                <label for="annoy-me" class="register__label register__label--checkbox">Would you like to receive newsletter?</label>
+                <input type="checkbox" class="register__input register__input--checkbox" name="newsletter" id="newsletter" checked/>
+                <label for="newsletter" class="register__label register__label--checkbox">Would you like to receive newsletter?</label>
             </div>
 
             <label for="region" class="register__label">Select Your Region:</label>
