@@ -1,0 +1,12 @@
+Unsplash Images:
+1. Image Filename: logo.jpg
+   Unsplash URL: https://unsplash.com/photos/brown-seal-7818Y6yhKbQ
+
+2. Image Filename: seal-in-water.jpg
+   Unsplash URL: https://unsplash.com/photos/sea-lion-in-water-during-daytime-7nl8Ap1skms
+
+3. Image Filename: two-seals.jpg
+   Unsplash URL: https://unsplash.com/photos/white-and-black-seal-on-white-sand-beach-during-daytime-oJbF_4qfrjE
+
+4. Image Filename: seal-asleep.jpg
+   Unsplash URL: https://unsplash.com/photos/a-number-of-sea-lions-laying-on-a-beach-uRQlCmfOCRg
