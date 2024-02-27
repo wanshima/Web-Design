@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #f7ede2;
+    color: #283618;
+
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    margin-bottom: 2rem; 
+    padding: 20px;
+
+    background-color: #f5cac3;
+    color: white;
+
+    text-align: center;
+}
+
+.register {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+
+    max-width: 30rem;
+    margin: auto;
+}
+
+.form-field {
+    display: contents; 
+}
+
+.register__name, .register__email, .register__confirm, .register__submit {
+    grid-column: 2 / 3; 
+}
+
+.register__error {
+    grid-column: 2 / 3; 
+    border: 1px solid red;
+
+    background-color: rgb(255, 0,0, 0.2);
+}
+
+.register__error:empty {
+    display: none; 
+}
+
+.register__name-label, .register__email-label, .register__confirm-label {
+    grid-column: 1 / 2;
+}
+
+.register__input.register__input--checkbox{
+    align-self: center
+}
+
+.register__input--checkbox, .register__label.register__label--checkbox {
+    margin-bottom: 0.5rem; 
+}
+
+.register__checkbox-container {
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center; 
+    gap: 0.5rem;
+}
+
+.register__submit {
+    grid-column: 1 / -1; 
+
+    margin: 16px 0;
+    border: none;
+    padding: 10px;
+
+    background-color: #f6bd60;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.asterisk {
+    color: red;
+}
+
+footer {
+    padding: 20px;
+    margin: 2rem 0;
+
+    background-color: #f5cac3;
+
+    text-align: center;
+}
+
+footer a {
+    color: white; 
+
+    text-decoration: none; 
+}
+
+@media (max-width: 40rem) {
+    .register {
+        grid-template-columns: 1fr; 
+    }
+    .register__name, .register__email, .register__confirm, .register__submit {
+        grid-column: 1 / -1; 
+    }
+    .register__name-label, .register__email-label, .register__confirm-label {
+        grid-column: 1 / -1; 
+    }
+    .register__error {
+        grid-column: 1 / -1; 
+    }
+}

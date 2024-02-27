@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script defer src="code.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Registration form</h1>
+    </header>
+    <form class="register" action="/register" method="POST">
+        <p class="asterisk">* Indicates required question</p>
+        <div class="form-field">
+            <label for="name" class="register__name-label">Name <span class="asterisk">*</span></label>
+            <input id="name" name="name" type="text" class="register__name">
+            <span class="register__error register__error--name"></span>
+        </div>
+        <div class="form-field">
+            <label for="email" class="register__email-label">Email <span class="asterisk">*</span></label>
+            <input id="email" name="email" type="text" class="register__email">
+            <span class="register__error register__error--email"></span>
+        </div>
+        <div class="form-field">
+            <label for="confirm" class="register__confirm-label">Confirm Email <span class="asterisk">*</span></label>
+            <input id="confirm" name="confirm" type="text" class="register__confirm">
+            <span class="register__error register__error--confirm"></span>
+        </div>
+        <div class="register__checkbox-container">
+            <input type="checkbox" class="register__input register__input--checkbox" name="wants-spam" id="wants-spam" checked/>
+            <label for="wants-spam" class="register__label register__label--checkbox">Do you like to receive spam?</label>
+        </div>
+        <label for="tier" class="register__label">Subscription Tier</label>
+        <select name="tier" id="tier" class="register__input">
+            <option value="" disabled selected>Please select</option>
+            <option value="1">Silver Tier</option>
+            <option value="2">Gold Tier</option>
+            <option value="3">Platinum Tier</option>
+        </select>
+        <button type="submit" class="register__submit">Register</button>
+    </form>
+    <footer>
+        <a href="privacy.html" class="privacy-policy">Privacy Policy</a>
+    </footer>
+</body>
+</html>
