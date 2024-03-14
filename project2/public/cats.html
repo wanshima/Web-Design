@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="menu.js"></script>
+</head>
+<body>
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <a href="/index.html">
+            <img src="images/logo.jpg" class="header__logo" alt="a domestic shorthair looking at you"/>
+        </a>
+        <h1 class="header__title">Famous Internet Cats</h1>
+        <div class="hamburger-menu">
+            <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="menu__submenu submenu">
+                <li class="submenu__item"><a class="submenu__link" href="/index.html">Home</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="/cats.html">Famous Cats</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="/eat/hats">Cats Events</a></li>
+            </ul>
+        </div>
+        <nav class="header__nav">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="/index.html">
+                        <button class="menu__toggle" type="button">Home</button>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="/cats.html">
+                        <button class="menu__toggle" type="button">Famous Cats</button>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__toggle" type="button">Cat Events</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="maincontent">
+        <div class="cards">
+            <div class="card">
+                <h3 class="card__title">Cat wants to hide</h3>
+                <img src="images/cool.jpg" alt="cool british shorthair wearing glass" class="card__pic">
+                <div class="text-content">
+                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Perspiciatis rerum aliquid atque, distinctio, ea soluta, consectetur accusantium 
+                        minus molestias quibusdam vitae odio at alias quidem ducimus blanditiis. 
+                        Sed, eius minus? <button class="open">Subscribe</button> to get more updates!</p>
+                </div>        
+                <dialog class="modal">
+                    <form id="subscribe-form" action="/subscribe" method="post" class="register">
+                        <h3 class="card__title">Subscribe to the Latest News!</h3>
+                        <div class="form-field">
+                            <label for="email" class="register__email-label">Email <span class="asterisk">* required</span></label>
+                            <input type="text" id="email" name="email" class="register__email">
+                            <span class="register__error register__error--email"></span>
+                        </div>
+                        <div class="form-field">
+                            <label for="confirm-email" class="register__confirm-label">Confirm Email <span class="asterisk">* required</span></label>
+                            <input type="text" id="confirm-email" name="confirmEmail" class="register__confirm">
+                            <span class="register__error register__error--confirm"></span>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="submit-btn">Subscribe</button>
+                            <button type="button" class="close">Cancel</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Cat in a Bag</h3>
+                <img src="images/cool.jpg" alt="cool british shorthair wearing glass" class="card__pic">
+                <div class="text-content">
+                    <p class="card__text">A cat was found in a bag today. <a class="card__link" href="/read.html">Read More</a> to get more updates!</p>
+                </div>        
+            </div>
+            <div class="card">
+                <h3 class="card__title">Cat in a Hat</h3>
+                <img src="images/cool.jpg" alt="cool british shorthair wearing glass" class="card__pic">
+                <div class="text-content">
+                    <p class="card__text">A cat was found in a hat today. <a class="card__link" href="/read.html">Read More</a> to get more updates!</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Cat on a Mat</h3>
+                <img src="images/cool.jpg" alt="cool british shorthair wearing glass" class="card__pic">
+                <div class="text-content">
+                    <p class="card__text">A cat was found on a Mat today. <a class="card__link" href="/read.html">Read More</a> to get more updates!</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Cat in a Box</h3>
+                <img src="images/cool.jpg" alt="cool british shorthair wearing glass" class="card__pic">
+                <div class="text-content">
+                    <p class="card__text">A cat was found in a box today. <a class="card__link" href="/read.html">Read More</a> to get more updates!</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Cat on a Pillow</h3>
+                <img src="images/cool.jpg" alt="cool british shorthair wearing glass" class="card__pic">
+                <div class="text-content">
+                    <p class="card__text">A cat was found on a pillow today. <a class="card__link" href="/read.html">Read More</a> to get more updates!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav class="footer__nav">
+            <ul class="footer__menu">
+                <li class="footer__item"><a href="/privacy.html">Privacy Policy</a></li>
+                <li class="footer__item"><a href="/work.html">Work for Us</a></li>
+                <li class="footer__item"><a href="/contact.html">Contact Us</a></li>
+                <li class="footer__item"><a href="/socialmedia.html">Social Media</a></li>
+            </ul>
+        </nav> 
+    </footer>
+</body>
+</html>
+
