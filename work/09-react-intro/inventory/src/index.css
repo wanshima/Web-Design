@@ -1,0 +1,16 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    color: black;
+    background-color: whitesmoke; 
+  }
+  a:hover {
+    color: blue;
+  }
+  button {
+    background-color: whitesmoke; 
+  }
+}
+
+button:hover {
+  border-color: red;
+}
