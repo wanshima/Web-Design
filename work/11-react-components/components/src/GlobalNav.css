@@ -1,0 +1,29 @@
+.global-nav {
+    background-color: var(--color-header-bg);
+}
+
+.global-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+}
+
+.global-nav__list--hidden {
+    display: none;
+}
+
+@media (min-width: 40rem) {
+    .global-nav__toggle {
+        display: none;
+    }
+
+    .global-nav__list--hidden {
+        display: flex;
+    }
+}
