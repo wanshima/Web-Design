@@ -6,26 +6,26 @@
     width: 20rem;
   }
   
-  .card-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-title {
-    font-size: 1.5em;
-  }
-  
-  .card-text {
-    font-size: 1em;
-  }
-  
-  .card-button {
-    padding: 10px 20px;
-    border: none;
+.card-image {
+  width: 100%;
+  height: auto;
+}
 
-    color: white;
-    background-color: burlywood;
+.card-title {
+  font-size: 1.5em;
+}
 
-    cursor: pointer;
-  }
+.card-text {
+  font-size: 1em;
+}
+
+.card-button {
+  padding: 10px 20px;
+  border: none;
+
+  color: white;
+  background-color: burlywood;
+
+  cursor: pointer;
+}
   
