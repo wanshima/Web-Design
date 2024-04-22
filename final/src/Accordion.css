@@ -1,0 +1,29 @@
+.accordion__toggle {
+    padding: 10px 20px;
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+
+    background: #65af1a;
+    transition: background-color 0.3s ease;
+
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.accordion__toggle:hover {
+    background-color: #e0e0e0;
+}
+
+.accordion__content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

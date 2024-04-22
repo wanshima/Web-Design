@@ -1,0 +1,9 @@
+.footer {
+    grid-column: span 12;
+    
+    padding: 1rem;
+    margin-top: 1rem;
+    
+    background-color: var(--color-header-bg);
+    text-align: center;
+}
