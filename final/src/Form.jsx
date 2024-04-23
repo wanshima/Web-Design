@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Form.css';
 
 function Form() {
@@ -6,6 +6,7 @@ function Form() {
     const [artist, setArtist] = useState('');
     const [customArtist, setCustomArtist] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [errors, setErrors] = useState({}); 
 
     const artistOptions = {
         France: ['Jean-François Millet', 'Paul Cézanne', 'Henri Matisse', 'Other'],
@@ -16,20 +17,40 @@ function Form() {
         setCountry(event.target.value);
         setArtist(''); 
         setCustomArtist(''); 
+        setErrors({}); 
     };
 
     const handleArtistChange = (event) => {
         setArtist(event.target.value);
         if (event.target.value !== 'Other') {
-            setCustomArtist(''); 
+            setCustomArtist('');
         }
+        setErrors({}); 
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const finalArtist = artist === 'Other' ? customArtist : artist;
-        console.log('Submitted:', { country, artist: finalArtist });
-        setSubmitted(true);
+        const errors = {};
+
+        if (!country) {
+            errors.country = 'Country is required';
+        }
+
+        if (!artist) {
+            errors.artist = 'Artist is required';
+        } else if (artist === 'Other' && !customArtist) {
+            errors.customArtist = 'Please specify the artist';
+        }
+
+        if (Object.keys(errors).length === 0) {
+            const finalArtist = artist === 'Other' ? customArtist : artist;
+            console.log('Submitted:', { country, artist: finalArtist });
+            setSubmitted(true);
+            setErrors({}); 
+        } else {
+            setErrors(errors);
+            setSubmitted(false); t
+        }
     };
 
     return (
@@ -42,6 +63,7 @@ function Form() {
                         <option value="France">France</option>
                         <option value="Japan">Japan</option>
                     </select>
+                    {errors.country && <p className="error">{errors.country}</p>}
                 </label>
             </div>
             <div>
@@ -53,6 +75,7 @@ function Form() {
                             <option key={name} value={name}>{name}</option>
                         ))}
                     </select>
+                    {errors.artist && <p className="error">{errors.artist}</p>}
                 </label>
                 {artist === 'Other' && (
                     <input 
@@ -62,9 +85,10 @@ function Form() {
                         placeholder="Specify other artist"
                     />
                 )}
+                {errors.customArtist && <p className="error">{errors.customArtist}</p>}
             </div>
             <button type="submit" aria-label="Submit registration form">Submit</button>
-            {submitted && (
+            {submitted && !Object.keys(errors).length && (
                 <p>Thank you for submitting the form! You've indicated that you are interested in artist {artist === 'Other' ? customArtist : artist} from {country}.</p>
             )}
         </form>

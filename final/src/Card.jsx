@@ -1,4 +1,3 @@
-import React from 'react';
 import './Card.css';
 
 function Card({ image, imageAlt, title, text, onReadMore }) {

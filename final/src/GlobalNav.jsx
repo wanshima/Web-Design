@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import menu from "./menu";
 import "./GlobalNav.css";
 

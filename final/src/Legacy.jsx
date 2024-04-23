@@ -1,4 +1,3 @@
-import React from 'react';
 import "./Biography.css"; 
 
 function Legacy() {
