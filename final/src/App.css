@@ -8,3 +8,30 @@ body {
   font-family: sans-serif;
   font-size: 1rem;
 }
+
+.skip-link {
+  position: absolute;
+  top: -40px;  
+  left: 0;
+
+  padding: 8px 16px;
+  border: 1px solid #000; 
+
+  background: #fff;  
+  color: #000;
+  z-index: 1000;  
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .skip-link:focus {
+        top: 10px;
+        transition: top 0.3s;  
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skip-link:focus {
+        top: 10px;
+        transition: none;  
+    }
+}
