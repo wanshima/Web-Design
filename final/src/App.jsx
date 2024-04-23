@@ -15,7 +15,9 @@ function App() {
   return (
     <div className="app-container">
       <Header setPage={setPage} />
-      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <nav>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
+      </nav>
       <main id="main-content">
         {page === 'home' && <Home setPage={setPage}/>}
         {page === 'impact' && <Impact />}

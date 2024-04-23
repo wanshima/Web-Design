@@ -21,7 +21,6 @@
   height: 100%;
 
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
 .card-overlay {
@@ -39,22 +38,41 @@
   color: white;
 
   opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.card-image-container:hover .card-overlay {
-  opacity: 1;
 }
 
 .card-title {
   padding: 10px;
 
-  font-size: 24px;
+  font-size: 1.4rem;
 }
 
 .card-text {
   padding: 5px 20px;
 
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card-image {
+    transition: transform 0.3s ease;
+  }
+
+  .card-overlay {
+    transition: opacity 0.3s ease;
+  }
+
+  .card-image-container:hover .card-overlay {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-image {
+    transition: none;
+  }
+
+  .card-overlay {
+    transition: none;
+  }
 }

@@ -24,7 +24,7 @@ h1 {
     color: #8d4908;
     z-index: 10; 
 
-    font-size: 20px; 
+    font-size: 1rem; 
     text-shadow: 0 0 3px #000;
     transform: translateY(-50%); 
     cursor: pointer;
@@ -57,7 +57,7 @@ h1 {
     }
 
     .carousel-container button {
-        font-size: 24px; 
+        font-size: 1.2rem; 
     }
 
     .carousel-container button:first-of-type {

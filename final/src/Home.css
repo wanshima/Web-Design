@@ -21,17 +21,6 @@
   margin: 0 auto; 
 }
 
-dialog {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-
-  padding: 20px;
-
-  transform: translate(-50%, -50%);
-
-}
-
 .main p {
   margin-left: 20px;
 }
@@ -61,7 +50,6 @@ dialog {
   gap: 1rem; 
 }
 
-
 .form-container label {
   margin-bottom: 0.5rem; 
 
@@ -90,7 +78,6 @@ dialog {
   background-color: #65af1a; 
   color: white; 
   cursor: pointer;
-  transition: background-color 0.3s ease; 
 }
 
 .form-container button:hover {

@@ -21,25 +21,37 @@ html {
   font-family: sans-serif;
   line-height: 1.6;
 }
+
 button {
-  padding: 0.6em 1.2em;  
+  padding: 0.6rem 1.2rem;  
   border-radius: 8px;  
   border: 1px solid transparent;   
 
   color: white;  
   background-color: #9d8b1b;  
 
-  font-size: 1em;  
+  font-size: 1rem;  
   font-weight: 500; 
   font-family: inherit; 
   text-align: center;  
   cursor: pointer;  
-  transition: border-color 0.25s, background-color 0.25s, color 0.25s;  
 }
 
-button:hover {
-  color: #fff;  
-  border-color: #646cff;  
-  background-color: #292929;  
+@media (prefers-reduced-motion: no-preference) {
+  button {
+    transition: border-color 0.25s, background-color 0.25s, color 0.25s;
+  }
+
+  button:hover {
+    color: #fff;
+    border-color: #646cff;
+    background-color: #292929;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
 }
 
