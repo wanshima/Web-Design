@@ -1,0 +1,43 @@
+.accordion__toggle {
+    padding: 10px 20px;
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+
+    background: #65af1a;
+
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .accordion__toggle:hover {
+        background-color: #e0e0e0;
+    }
+    .accordion__toggle {
+        transition: background-color 0.3s ease;
+    }
+    
+    .accordion__content {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-top: none;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion__toggle {
+        transition: none;  
+    }
+
+    .accordion__content {
+        animation: none;  
+    }
+}
